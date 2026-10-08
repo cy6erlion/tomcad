@@ -1,5 +1,5 @@
 use std::env;
-use tomcad::{start, Caddy, Error};
+use tomcad::start;
 
 fn main() {
     let cmd_arg = 1;
@@ -9,7 +9,7 @@ fn main() {
         match command.as_ref() {
             "start" => {
                 if let Some(endpoints) = &env::args().nth(input_arg) {
-                    match start(&endpoints) {
+                    match start(endpoints) {
                         Ok(_) => std::process::exit(0),
                         Err(e) => panic!("{e}"),
                     }
