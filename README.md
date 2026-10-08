@@ -64,3 +64,9 @@ handler = "reverse_proxy"
 [[apps.http.servers.myhostname.routes.handle.routes.handle.upstreams]]
 dial = "localhost:6000"
 ```
+
+## Usage
+
+``` bash
+$ cargo run -- start "<PATH_TO_TOML_FILE>"
+```
